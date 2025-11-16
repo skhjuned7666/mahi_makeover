@@ -37,12 +37,14 @@ export default function Modal({ open, onClose, title, children }: ModalProps) {
             animate={{ y: 0, scale: 1, opacity: 1 }}
             exit={{ y: 20, scale: 0.98, opacity: 0 }}>
             {title ? (
-              <h3 className='text-xl font-semibold mb-4'>{title}</h3>
+              <h3 className='text-xl font-semibold mb-4 text-slate-900'>
+                {title}
+              </h3>
             ) : null}
             <button
               onClick={onClose}
               aria-label='Close modal'
-              className='absolute right-4 top-4 rounded-full px-2 py-1 text-deep1/70 hover:text-deep1 bg-pink4'
+              className='absolute right-4 top-4 rounded-full px-2 py-1 text-slate-500 hover:text-slate-900 bg-pink4'
               type='button'>
               ✕
             </button>

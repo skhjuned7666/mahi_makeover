@@ -31,17 +31,23 @@ const StarBorder = ({
       {...rest}>
       <div
         className='pointer-events-none absolute bottom-[-11px] right-[-250%] h-[50%] w-[300%] rounded-full opacity-70 animate-star-movement-bottom'
-        style={{
-          background: `radial-gradient(circle, ${color}, transparent 10%)`,
-          animationDuration: speed,
-        }}
+        style={
+          {
+            // Dynamic inline styles needed for customizable color and animation speed
+            background: `radial-gradient(circle, ${color}, transparent 10%)`,
+            animationDuration: speed,
+          } as CSSProperties
+        }
       />
       <div
         className='pointer-events-none absolute left-[-250%] top-[-10px] h-[50%] w-[300%] rounded-full opacity-70 animate-star-movement-top'
-        style={{
-          background: `radial-gradient(circle, ${color}, transparent 10%)`,
-          animationDuration: speed,
-        }}
+        style={
+          {
+            // Dynamic inline styles needed for customizable color and animation speed
+            background: `radial-gradient(circle, ${color}, transparent 10%)`,
+            animationDuration: speed,
+          } as CSSProperties
+        }
       />
       <div className='relative z-[1] rounded-[20px] border border-white/20 bg-gradient-to-b from-[var(--violet-1)] via-[var(--pink-1)] to-[var(--pink-2)] px-6 py-3 text-center text-sm font-semibold text-white shadow-soft sm:px-8 sm:py-4 sm:text-base'>
         {children}

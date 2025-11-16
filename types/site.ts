@@ -6,6 +6,7 @@ export interface Socials {
 
 export interface SiteConfig {
   siteName: string;
+  siteNameMob: string;
   logo: string;
   tagline: string;
   contactEmail: string;

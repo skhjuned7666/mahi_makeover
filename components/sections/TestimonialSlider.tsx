@@ -36,8 +36,8 @@ export default function TestimonialSlider({
           animate={{ opacity: 1, y: 0 }}
           exit={{ opacity: 0, y: -10 }}
           transition={{ duration: 0.3 }}>
-          <p className='text-deep1/90 italic'>"{items[idx]?.quote}"</p>
-          <div className='mt-3 text-sm text-deep1/70'>
+          <p className='text-slate-700 italic'>"{items[idx]?.quote}"</p>
+          <div className='mt-3 text-sm text-slate-500'>
             — {items[idx]?.author}
           </div>
         </motion.div>
@@ -45,14 +45,14 @@ export default function TestimonialSlider({
       <div className='absolute inset-y-0 right-3 flex items-center gap-2'>
         <button
           aria-label='Previous'
-          className='btn btn-ghost px-3 py-2'
+          className='btn btn-ghost px-3 py-2 btn-responsive'
           onClick={prev}
           type='button'>
           ‹
         </button>
         <button
           aria-label='Next'
-          className='btn btn-ghost px-3 py-2'
+          className='btn btn-ghost px-3 py-2 btn-responsive'
           onClick={next}
           type='button'>
           ›

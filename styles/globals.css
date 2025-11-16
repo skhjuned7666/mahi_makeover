@@ -9,13 +9,25 @@
   --pink-4: #F7E1EE;
   --violet-1: #9D6099;
   --deep-1: #5C4B75;
+  
+  /* New luxury gold variables */
+  --gold-100: #FFF8DC;
+  --gold-300: #D4AF37;
+  --gold-400: #B8860B;
+  --gold-500: #996515;
+  
+  /* Extended dark palette */
+  --dark-100: #3A2F4D;
+  --dark-200: #251E30;
 }
+
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Inter:wght@300;400;500;600;700&display=swap');
 
 html { scroll-behavior: smooth; }
 * { -webkit-tap-highlight-color: transparent; }
 
 body {
-  @apply bg-pink4 text-deep1;
+  @apply text-deep1;
   font-family: 'Inter', system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
 }
 
@@ -28,23 +40,60 @@ body {
 .btn {
   @apply inline-flex items-center justify-center rounded-2xl px-5 py-3 font-medium transition-transform duration-200 shadow-soft;
 }
+
+/* Responsive button sizes */
+.btn-responsive {
+  @apply px-4 py-2 text-sm sm:px-5 sm:py-3 sm:text-base md:px-6 md:py-3 md:text-lg;
+}
+
 .btn-primary {
   background: linear-gradient(135deg, var(--pink-1), var(--pink-2));
   color: white;
+  font-family: 'Inter', sans-serif;
+  position: relative;
 }
+
 .btn-primary:hover {
   transform: translateY(-2px) scale(1.02);
   box-shadow: 0 12px 30px rgba(216,89,140,0.35);
 }
+
+/* Gold accent button */
+.btn-gold {
+  background: linear-gradient(135deg, var(--gold-300), var(--gold-400));
+  color: var(--deep-1);
+  font-family: 'Inter', sans-serif;
+  position: relative;
+  box-shadow: 0 0 15px rgba(212, 175, 55, 0.4);
+}
+
+.btn-gold:hover {
+  transform: translateY(-2px) scale(1.02);
+  box-shadow: 0 0 25px rgba(212, 175, 55, 0.6);
+}
+
 .btn-ghost {
   @apply bg-white text-deep1;
   box-shadow: inset 0 0 0 1px rgba(0,0,0,0.06);
+  font-family: 'Inter', sans-serif;
 }
+
 .btn-ghost:hover { @apply shadow-soft-lg; }
 
 .soft-card {
   @apply bg-white rounded-3xl shadow-soft p-6;
   background-image: radial-gradient(1200px 400px at 80% -10%, rgba(227,122,177,.14), transparent);
+}
+
+@keyframes shimmer {
+  0% { background-position: -1000px 0; }
+  100% { background-position: 1000px 0; }
+}
+
+.shimmer-effect {
+  background: linear-gradient(to right, #f6f6f6 8%, #f0f0f0 18%, #f6f6f6 33%);
+  background-size: 1000px 100%;
+  animation: shimmer 2s infinite linear;
 }
 
 @media (prefers-reduced-motion: reduce) {
@@ -54,4 +103,6 @@ body {
   }
 }
 
-
+.beams-container-shadow {
+  box-shadow: 0 0 24px rgba(34, 42, 53, 0.06), 0 1px 1px rgba(0, 0, 0, 0.05), 0 0 0 1px rgba(34, 42, 53, 0.04), 0 0 4px rgba(34, 42, 53, 0.08), 0 16px 68px rgba(47, 48, 55, 0.05), 0 1px 0 rgba(255, 255, 255, 0.1) inset;
+}

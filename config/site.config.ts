@@ -1,9 +1,10 @@
 import { SiteConfig } from "@/types/site";
 
 const siteConfig: SiteConfig = {
-  siteName: "Artist Makeover",
-  logo: "/logo.svg",
-  tagline: "Soft. Elegant. You.",
+  siteName: "/brandName.png",
+  siteNameMob: "/brandNameMob.png",
+  logo: "/logo2.png",
+  tagline: "Your most Welcome...",
   contactEmail: "demo@example.com",
   socials: {
     instagram: "https://instagram.com/",

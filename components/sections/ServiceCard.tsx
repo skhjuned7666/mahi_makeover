@@ -1,5 +1,5 @@
 import { motion } from "framer-motion";
-import StarBorder from "./StarBorder";
+import StarBorder from "@/components/ui/components/StarBorder";
 import { Service } from "@/types";
 
 interface ServiceCardProps extends Service {

@@ -18,10 +18,12 @@ export default function Accordion({ items = [] }: AccordionProps) {
             <button
               className='w-full text-left flex items-center justify-between'
               onClick={() => setOpenIndex(isOpen ? null : idx)}
-              aria-expanded={isOpen}
+              {...(isOpen
+                ? { "aria-expanded": "true" }
+                : { "aria-expanded": "false" })}
               type='button'>
-              <span className='font-semibold'>{it.title}</span>
-              <span className='text-pink1'>{isOpen ? "−" : "+"}</span>
+              <span className='font-semibold text-slate-900'>{it.title}</span>
+              <span className='text-green-600'>{isOpen ? "−" : "+"}</span>
             </button>
             <AnimatePresence initial={false}>
               {isOpen ? (
@@ -30,7 +32,9 @@ export default function Accordion({ items = [] }: AccordionProps) {
                   animate={{ height: "auto", opacity: 1 }}
                   exit={{ height: 0, opacity: 0 }}
                   className='overflow-hidden'>
-                  <div className='pt-3 text-sm text-deep1/80'>{it.content}</div>
+                  <div className='pt-3 text-sm text-slate-600'>
+                    {it.content}
+                  </div>
                 </motion.div>
               ) : null}
             </AnimatePresence>
