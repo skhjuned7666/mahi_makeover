@@ -107,7 +107,7 @@ export default function Hero({ onCTAClick }: HeroProps) {
         </div>
 
         {/* Second row with image carousel */}
-        <div className='w-full mt-8'>
+        <div className='w-full mt-8 block md:hidden'>
           <HeroImageCarousel />
         </div>
       </div>
