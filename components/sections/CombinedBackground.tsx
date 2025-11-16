@@ -11,7 +11,7 @@ export const CombinedBackground = ({ children }: CombinedBackgroundProps) => {
   return (
     <div className='relative w-full min-h-screen'>
       {/* Dark gradient background - positioned absolutely with low z-index */}
-      <div className='fixed inset-0 z-0 bg-gradient-to-br from-dark-200 via-dark-100 to-deep1'></div>
+      <div className='fixed inset-0 z-0 bg-gradient-to-br from-purple-900 via-dark-200 to-red-950'></div>
 
       {/* Vortex background - positioned absolutely with low z-index */}
       <div className='fixed inset-0 z-0'>
