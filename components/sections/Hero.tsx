@@ -91,7 +91,7 @@ export default function Hero({ onCTAClick }: HeroProps) {
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
               href='#services'
-              className='btn btn-ghost text-xs sm:text-lg px-6 py-3 sm:px-8 sm:py-4 rounded-full border-2 border-deep1/20 hover:border-deep1/40 transition-all duration-300 w-50% md:w-full xs:w-auto'>
+              className='btn btn-gold text-xs sm:text-lg px-6 py-3 sm:px-8 sm:py-4 rounded-full border-2 border-gold-300/30 hover:border-gold-300 transition-all duration-300 w-50% md:w-full xs:w-auto'>
               Explore Services
             </motion.a>
           </motion.div>

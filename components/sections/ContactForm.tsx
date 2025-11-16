@@ -50,14 +50,14 @@ export default function ContactForm() {
         <label className='text-sm text-slate-700'>Name</label>
         <input
           {...register("name", { required: true })}
-          className='mt-1 w-full rounded-2xl border border-pink3 bg-white px-4 py-3 outline-none focus:border-pink1'
+          className='mt-1 w-full rounded-2xl border border-gold-300/30 bg-white px-4 py-3 outline-none focus:border-gold-300 focus:ring-2 focus:ring-gold-300/20'
           placeholder='Your name'
           {...(errors.name
             ? { "aria-invalid": "true" }
             : { "aria-invalid": "false" })}
         />
         {errors.name ? (
-          <p className='text-xs text-green-600 mt-1'>Required</p>
+          <p className='text-xs text-gold-500 mt-1'>Required</p>
         ) : null}
       </div>
       <div>
@@ -65,14 +65,14 @@ export default function ContactForm() {
         <input
           type='email'
           {...register("email", { required: true, pattern: /.+@.+\..+/ })}
-          className='mt-1 w-full rounded-2xl border border-pink3 bg-white px-4 py-3 outline-none focus:border-pink1'
+          className='mt-1 w-full rounded-2xl border border-gold-300/30 bg-white px-4 py-3 outline-none focus:border-gold-300 focus:ring-2 focus:ring-gold-300/20'
           placeholder='you@example.com'
           {...(errors.email
             ? { "aria-invalid": "true" }
             : { "aria-invalid": "false" })}
         />
         {errors.email ? (
-          <p className='text-xs text-green-600 mt-1'>Valid email required</p>
+          <p className='text-xs text-gold-500 mt-1'>Valid email required</p>
         ) : null}
       </div>
       <div>
@@ -80,19 +80,19 @@ export default function ContactForm() {
         <textarea
           rows={5}
           {...register("message", { required: true, minLength: 10 })}
-          className='mt-1 w-full rounded-2xl border border-pink3 bg-white px-4 py-3 outline-none focus:border-pink1'
+          className='mt-1 w-full rounded-2xl border border-gold-300/30 bg-white px-4 py-3 outline-none focus:border-gold-300 focus:ring-2 focus:ring-gold-300/20'
           placeholder='Tell us about your event...'
           {...(errors.message
             ? { "aria-invalid": "true" }
             : { "aria-invalid": "false" })}
         />
         {errors.message ? (
-          <p className='text-xs text-green-600 mt-1'>Please add more details</p>
+          <p className='text-xs text-gold-500 mt-1'>Please add more details</p>
         ) : null}
       </div>
       <button
         disabled={isSubmitting}
-        className='btn btn-primary w-full btn-responsive'
+        className='btn btn-gold w-full btn-responsive'
         type='submit'>
         {isSubmitting ? "Sending..." : "Send Message"}
       </button>
@@ -100,7 +100,7 @@ export default function ContactForm() {
         <div
           role='status'
           className={`text-sm ${
-            status.ok ? "text-green-600" : "text-green-600"
+            status.ok ? "text-gold-500" : "text-gold-500"
           }`}>
           {status.message}
         </div>

@@ -11,7 +11,7 @@ const siteConfig: SiteConfig = {
     facebook: "https://facebook.com/",
     tiktok: "",
   },
-  address: "Mumbai, India"
+  address: "Nashik, India"
 };
 
 export default siteConfig;

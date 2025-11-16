@@ -32,7 +32,7 @@ export default function Modal({ open, onClose, title, children }: ModalProps) {
             aria-label='Close modal overlay'
           />
           <motion.div
-            className='relative soft-card max-w-lg w-[92%]'
+            className='relative soft-card max-w-lg w-[92%] max-h-[70vh] flex flex-col'
             initial={{ y: 30, scale: 0.98, opacity: 0 }}
             animate={{ y: 0, scale: 1, opacity: 1 }}
             exit={{ y: 20, scale: 0.98, opacity: 0 }}>
@@ -48,7 +48,9 @@ export default function Modal({ open, onClose, title, children }: ModalProps) {
               type='button'>
               ✕
             </button>
-            {children}
+            <div className='overflow-y-auto flex-grow pr-2 -mr-2'>
+              {children}
+            </div>
           </motion.div>
         </motion.div>
       ) : null}
