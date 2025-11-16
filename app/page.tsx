@@ -53,16 +53,12 @@ export default function Home() {
 
           <section id='services' className='mx-auto max-w-6xl px-4 md:py-12'>
             <div className='text-center mb-8 relative'>
-              <div className='absolute inset-0 bg-gradient-to-r from-pink-100/20 via-purple-100/20 to-gold-100/20 rounded-3xl blur-xl -z-10'></div>
-              <h2 className='text-3xl md:text-4xl font-bold text-center text-transparent bg-clip-text bg-gradient-to-r from-pink-500 via-purple-500 to-gold-400 animate-text-glow py-4'>
+              <h2 className='text-3xl md:text-4xl font-bold text-center text-white/10 bg-clip-text bg-gradient-to-r from-pink-500 via-purple-500 to-yellow-400 animate-text-glow py-4'>
                 <span className='relative inline-block'>
                   <span className='relative z-10'>Services</span>
                   <span className='absolute top-0 left-0 w-full h-full bg-gradient-to-r from-pink-300 via-purple-300 to-gold-300 blur-lg opacity-30 animate-pulse'></span>
                 </span>
               </h2>
-              <p className='text-slate-600 mt-2 text-center text-lg font-medium animate-fade-in'>
-                Choose from curated packages
-              </p>
             </div>
             <div className='mt-6'>
               <ServicesTestimonials onBook={() => setBookingOpen(true)} />
@@ -71,15 +67,12 @@ export default function Home() {
 
           <section id='portfolio' className='mx-auto max-w-6xl px-4 py-12'>
             <div className='text-center mb-8 relative'>
-              <h2 className='text-3xl md:text-4xl font-bold text-center text-transparent bg-clip-text bg-gradient-to-r from-pink-500 via-purple-500 to-gold-400 animate-text-glow py-4'>
+              <h2 className='text-3xl md:text-4xl font-bold text-center text-white/10 bg-clip-text bg-gradient-to-r from-pink-500 via-purple-500 to-yellow-400 animate-text-glow py-4'>
                 <span className='relative inline-block'>
                   <span className='relative z-10'>Portfolio</span>
-                  <span className='absolute top-0 left-0 w-full h-full bg-gradient-to-r from-pink-300 via-purple-300 to-gold-300 blur-lg opacity-10 animate-pulse'></span>
+                  <span className='absolute top-0 left-0 w-full h-full bg-gradient-to-r from-pink-300 via-purple-300 to-gold-300 blur-lg opacity-30 animate-pulse'></span>
                 </span>
               </h2>
-              <p className='text-slate-600 mt-2 text-center text-lg font-medium animate-fade-in'>
-                Filterable grid with lightbox
-              </p>
             </div>
             <div className='mt-6'>
               <PortfolioGrid items={portfolio} />
@@ -88,18 +81,12 @@ export default function Home() {
 
           <section id='about' className='mx-auto max-w-6xl px-4 py-12'>
             <div className='text-center mb-8 relative'>
-              <h2 className='text-3xl md:text-4xl font-bold text-center text-transparent bg-clip-text bg-gradient-to-r from-pink-500 via-purple-500 to-gold-400 animate-text-glow py-4'>
-                <span className='relative inline-block'>
-                  <span className='relative z-10'>About</span>
-                  <span className='absolute top-0 left-0 w-full h-full bg-gradient-to-r from-pink-300 via-purple-300 to-gold-300 blur-lg opacity-30 animate-pulse'></span>
-                </span>
+              <h2 className='text-3xl md:text-4xl font-bold text-center text-white/10 bg-clip-text bg-gradient-to-r from-pink-500 via-purple-500 to-gold-400 animate-text-glow py-4'>
+                <span className='relative z-10'>About</span>
+                <span className='absolute top-0 left-0 w-full h-full bg-gradient-to-r from-pink-300 via-purple-300 to-gold-300 blur-lg opacity-30 animate-pulse'></span>
               </h2>
             </div>
             <div className='soft-card'>
-              <p className='text-slate-700 mt-3'>
-                Passionate makeup artist delivering soft, elegant glam tailored
-                to your features. Timeline/FAQ below:
-              </p>
               <div className='mt-6'>
                 <Accordion items={faq} />
               </div>
@@ -108,7 +95,7 @@ export default function Home() {
 
           <section id='testimonials' className='mx-auto max-w-6xl px-4 py-12'>
             <div className='text-center mb-8 relative'>
-              <h2 className='text-3xl md:text-4xl font-bold text-center text-transparent bg-clip-text bg-gradient-to-r from-pink-500 via-purple-500 to-gold-400 animate-text-glow py-4'>
+              <h2 className='text-3xl md:text-4xl font-bold text-center text-white/10 bg-clip-text bg-gradient-to-r from-pink-500 via-purple-500 to-gold-400 animate-text-glow py-4'>
                 <span className='relative inline-block'>
                   <span className='relative z-10'>Testimonials</span>
                   <span className='absolute top-0 left-0 w-full h-full bg-gradient-to-r from-pink-300 via-purple-300 to-gold-300 blur-lg opacity-30 animate-pulse'></span>
@@ -122,7 +109,7 @@ export default function Home() {
 
           <section id='pricing' className='mx-auto max-w-6xl px-4 py-12'>
             <div className='text-center mb-8 relative'>
-              <h2 className='text-3xl md:text-4xl font-bold text-center text-transparent bg-clip-text bg-gradient-to-r from-pink-500 via-purple-500 to-gold-400 animate-text-glow py-4'>
+              <h2 className='text-3xl md:text-4xl font-bold text-center text-white/10 bg-clip-text bg-gradient-to-r from-pink-500 via-purple-500 to-gold-400 animate-text-glow py-4'>
                 <span className='relative inline-block'>
                   <span className='relative z-10'>Pricing</span>
                   <span className='absolute top-0 left-0 w-full h-full bg-gradient-to-r from-pink-300 via-purple-300 to-gold-300 blur-lg opacity-30 animate-pulse'></span>
@@ -170,15 +157,12 @@ export default function Home() {
 
           <section id='contact' className='mx-auto max-w-6xl px-4 py-12'>
             <div className='text-center mb-8 relative'>
-              <h2 className='text-3xl md:text-4xl font-bold text-center text-transparent bg-clip-text bg-gradient-to-r from-pink-500 via-purple-500 to-gold-400 animate-text-glow py-4'>
+              <h2 className='text-3xl md:text-4xl font-bold text-center text-white/10 bg-clip-text bg-gradient-to-r from-pink-500 via-purple-500 to-gold-400 animate-text-glow py-4'>
                 <span className='relative inline-block'>
                   <span className='relative z-10'>Get in Touch</span>
                   <span className='absolute top-0 left-0 w-full h-full bg-gradient-to-r from-pink-300 via-purple-300 to-gold-300 blur-lg opacity-30 animate-pulse'></span>
                 </span>
               </h2>
-              <p className='text-slate-600 mt-2 text-center text-lg font-medium animate-fade-in'>
-                Ready to book your session? Reach out to us today.
-              </p>
             </div>
             <div className='mt-6 grid md:grid-cols-2 gap-6'>
               <ContactForm />
