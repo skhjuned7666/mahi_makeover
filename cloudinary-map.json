@@ -1,0 +1,17 @@
+[
+  {
+    "file": "sample1.jpg",
+    "publicId": "brids/sample1",
+    "url": "https://res.cloudinary.com/dc0g30mss/image/upload/f_auto,q_auto/brids/sample1.jpg"
+  },
+  {
+    "file": "sample2.png",
+    "publicId": "brids/sample2",
+    "url": "https://res.cloudinary.com/dc0g30mss/image/upload/f_auto,q_auto/brids/sample2.png"
+  },
+  {
+    "file": "sample3.webp",
+    "publicId": "brids/sample3",
+    "url": "https://res.cloudinary.com/dc0g30mss/image/upload/f_auto,q_auto/brids/sample3.webp"
+  }
+]
