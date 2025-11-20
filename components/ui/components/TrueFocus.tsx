@@ -131,7 +131,7 @@ const TrueFocus = ({
                   ? `blur(0px)`
                   : `blur(${blurAmount}px)`,
                 // Apply text color based on active state
-                color: isActive ? "#e7a3cc" : "#475569",
+                color: isActive ? "#9a236a" : "#475569",
 
                 transition: `filter ${animationDuration}s ease, color ${animationDuration}s ease`,
               } as React.CSSProperties

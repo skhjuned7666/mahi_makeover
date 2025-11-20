@@ -19,7 +19,7 @@ const nav: NavItem[] = [
 
 export default function Navbar() {
   return (
-    <header className='fixed top-0 left-0 right-0 z-50 backdrop-blur supports-[backdrop-filter]:bg-white/50 bg-white/20'>
+    <header className='fixed top-0 left-0 right-0 z-50 backdrop-blur supports-[backdrop-filter]:bg-transparent'>
       <nav className='mx-auto max-w-6xl px-3 md:px-3 py-0 md:py-1 flex items-center justify-between'>
         <div className='flex items-center'>
           <div className='block items-center w-auto h-auto rounded-full overflow-hidden'>
@@ -56,7 +56,7 @@ export default function Navbar() {
             Premium
           </a>
         </div>
-        {/* <div className='md:hidden relative'>
+        <div className='md:hidden relative'>
           <Image
             src={site.siteNameMob}
             alt={`${site.siteName} logo`}
@@ -64,7 +64,7 @@ export default function Navbar() {
             height={40}
             priority
           />
-        </div> */}
+        </div>
         <div className='md:hidden'>
           <a href='#contact' className='btn btn-primary text-sm btn-responsive'>
             Book

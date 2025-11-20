@@ -11,7 +11,7 @@ export const CombinedBackground = ({ children }: CombinedBackgroundProps) => {
   return (
     <div className='relative w-full min-h-screen'>
       {/* Dark gradient background - positioned absolutely with low z-index */}
-      <div className='fixed inset-0 z-0 bg-gradient-to-br from-purple-900 via-dark-200 to-red-950'></div>
+      <div className='fixed inset-0 z-0 bg-gradient-to-br from-white via-white to-white'></div>
 
       {/* Vortex background - positioned absolutely with low z-index */}
       <div className='fixed inset-0 z-0'>
@@ -27,8 +27,11 @@ export const CombinedBackground = ({ children }: CombinedBackgroundProps) => {
         />
       </div>
 
+      {/* Dark gradient overlay - positioned above vortex but behind content */}
+      <div className='fixed inset-0 z-10 bg-gradient-to-b from-red-900/30 via-white/25 to-white/50 pointer-events-none'></div>
+
       {/* Content - positioned relatively so it's above the background but below fixed navbar */}
-      <div className='relative z-0 pt-16'>{children}</div>
+      <div className='relative z-20 pt-16'>{children}</div>
     </div>
   );
 };
