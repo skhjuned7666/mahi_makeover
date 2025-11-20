@@ -1,9 +1,9 @@
 import { SiteConfig } from "@/types/site";
 
 const siteConfig: SiteConfig = {
-  siteName: "/brandName.png",
-  siteNameMob: "/brandNameMob.png",
-  logo: "/logo2.png",
+  siteName: "https://res.cloudinary.com/dc0g30mss/image/upload/v1763668979/brandName_jzqbmg.png",
+  siteNameMob: "https://res.cloudinary.com/dc0g30mss/image/upload/v1763668979/brandNameMob_bjuugo.png",
+  logo: "https://res.cloudinary.com/dc0g30mss/image/upload/v1763668979/logo2_zafbgj.png",
   tagline: "Welcome to the World of Bridal Glamour !",
   contactEmail: "demo@example.com",
   socials: {

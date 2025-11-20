@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<!-- 
+WHATSAPP BOOKING FORM (Vanilla HTML/JS)
+- Replace ADMIN_PHONE with your actual number (format: country code + number, no + or spaces)
+- Message format can be customized in the buildMessage() function
+- Works on mobile and desktop browsers
+- Opens WhatsApp with pre-filled message on submit
+-->
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Booking Form</title>
+    <style>
+      /* Minimal responsive CSS */
+      body {
+        font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+          sans-serif;
+        max-width: 500px;
+        margin: 0 auto;
+        padding: 20px;
+        background: #f8f9fa;
+      }
+      .form-container {
+        background: white;
+        padding: 24px;
+        border-radius: 16px;
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+      }
+      .form-title {
+        font-size: 24px;
+        font-weight: 600;
+        margin-bottom: 16px;
+        color: #333;
+      }
+      .form-group {
+        margin-bottom: 20px;
+      }
+      label {
+        display: block;
+        margin-bottom: 6px;
+        font-weight: 500;
+        color: #444;
+        font-size: 14px;
+      }
+      .required {
+        color: #e53e3e;
+      }
+      input,
+      select,
+      textarea {
+        width: 100%;
+        padding: 12px;
+        border: 1px solid #ddd;
+        border-radius: 8px;
+        font-size: 16px;
+        box-sizing: border-box;
+      }
+      input:focus,
+      select:focus,
+      textarea:focus {
+        outline: none;
+        border-color: #e91e63;
+        box-shadow: 0 0 0 2px rgba(233, 30, 99, 0.2);
+      }
+      .checkbox-group {
+        display: flex;
+        align-items: flex-start;
+      }
+      .checkbox-group input {
+        width: auto;
+        margin-right: 10px;
+      }
+      .buttons {
+        display: flex;
+        gap: 12px;
+        margin-top: 24px;
+      }
+      button {
+        flex: 1;
+        padding: 14px;
+        border: none;
+        border-radius: 8px;
+        font-size: 16px;
+        font-weight: 500;
+        cursor: pointer;
+      }
+      .submit-btn {
+        background: linear-gradient(135deg, #d8598c, #e37ab1);
+        color: white;
+      }
+      .cancel-btn {
+        background: #f1f5f9;
+        color: #64748b;
+      }
+      .status-message {
+        padding: 12px;
+        border-radius: 8px;
+        margin-bottom: 16px;
+        font-size: 14px;
+      }
+      .success {
+        background: #f0fff4;
+        color: #38a169;
+      }
+      .error {
+        background: #fed7d7;
+        color: #e53e3e;
+      }
+      @media (max-width: 480px) {
+        body {
+          padding: 16px;
+        }
+        .buttons {
+          flex-direction: column;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="form-container">
+      <h1 class="form-title">Book Your Session</h1>
+      <p style="margin-bottom: 20px; color: #666; font-size: 14px">
+        Fill out the form below to book your makeup session. We'll get back to
+        you within 24 hours.
+      </p>
+
+      <div id="statusMessage"></div>
+
+      <form id="bookingForm">
+        <div class="form-group">
+          <label for="name">Full Name <span class="required">*</span></label>
+          <input type="text" id="name" required placeholder="Your full name" />
+        </div>
+
+        <div class="form-group">
+          <label for="phone"
+            >Phone Number <span class="required">*</span></label
+          >
+          <input
+            type="tel"
+            id="phone"
+            required
+            placeholder="Your phone number" />
+        </div>
+
+        <div class="form-group">
+          <label for="email">Email Address</label>
+          <input type="email" id="email" placeholder="your.email@example.com" />
+        </div>
+
+        <div class="form-group">
+          <label for="service"
+            >Service Type <span class="required">*</span></label
+          >
+          <select id="service" required>
+            <option value="">Select a service</option>
+            <option value="Bridal Glam - ₹15,000">Bridal Glam - ₹15,000</option>
+            <option value="Engagement Look - ₹8,000">
+              Engagement Look - ₹8,000
+            </option>
+            <option value="Party Makeup - ₹5,000">Party Makeup - ₹5,000</option>
+            <option value="Photoshoot Makeup - ₹7,000">
+              Photoshoot Makeup - ₹7,000
+            </option>
+          </select>
+        </div>
+
+        <div class="form-group">
+          <label for="date">Preferred Date</label>
+          <input type="date" id="date" />
+        </div>
+
+        <div class="form-group">
+          <label for="message">Additional Details</label>
+          <textarea
+            id="message"
+            rows="3"
+            placeholder="Any special requests or details about your event..."></textarea>
+        </div>
+
+        <div class="form-group checkbox-group">
+          <input type="checkbox" id="terms" required />
+          <label for="terms"
+            >I agree to the
+            <a href="#" style="color: #e91e63">terms and conditions</a>
+            <span class="required">*</span></label
+          >
+        </div>
+
+        <div class="buttons">
+          <button type="submit" class="submit-btn">
+            Submit Booking Request
+          </button>
+          <button type="button" class="cancel-btn" onclick="window.close()">
+            Cancel
+          </button>
+        </div>
+      </form>
+    </div>
+
+    <script>
+      // ADMIN PHONE - Replace with your actual number
+      // Format: Country code + number without '+' or spaces (e.g., 917666009723 for India)
+      const ADMIN_PHONE = "917666009723";
+
+      document
+        .getElementById("bookingForm")
+        .addEventListener("submit", function (e) {
+          e.preventDefault();
+
+          // Get form data
+          const name = document.getElementById("name").value;
+          const phone = document.getElementById("phone").value;
+          const email = document.getElementById("email").value;
+          const service = document.getElementById("service").value;
+          const date = document.getElementById("date").value;
+          const message = document.getElementById("message").value;
+          const terms = document.getElementById("terms").checked;
+
+          // Validate required fields
+          if (!name.trim() || !phone.trim() || !service.trim() || !terms) {
+            showStatus(
+              "Please fill in all required fields and agree to terms.",
+              "error"
+            );
+            return;
+          }
+
+          // Show loading message
+          showStatus("Opening WhatsApp...", "success");
+
+          // Build message string
+          let messageText = "New Booking Enquiry\n\n";
+          messageText += `Name: ${name}\n`;
+          messageText += `Phone: ${phone}\n`;
+          messageText += `Email: ${email || "Not provided"}\n`;
+          messageText += `Service: ${service}\n`;
+          messageText += `Date: ${date || "Not provided"}\n`;
+          messageText += `Notes: ${message || "No additional notes"}`;
+
+          // URL encode the message
+          const encodedMessage = encodeURIComponent(messageText);
+
+          // Check if admin phone is provided
+          if (!ADMIN_PHONE) {
+            console.error(
+              "ADMIN_PHONE is not set. Please configure the admin phone number."
+            );
+            showStatus(
+              "Booking system configuration error. Please contact support.",
+              "error"
+            );
+            alert(
+              "Booking system configuration error. Please contact support."
+            );
+            return;
+          }
+
+          // Open WhatsApp
+          const whatsappUrl = `https://wa.me/${ADMIN_PHONE}?text=${encodedMessage}`;
+          window.open(whatsappUrl, "_blank");
+        });
+
+      function showStatus(message, type) {
+        const statusEl = document.getElementById("statusMessage");
+        statusEl.textContent = message;
+        statusEl.className = `status-message ${type}`;
+        statusEl.style.display = "block";
+
+        // Hide after 3 seconds for success messages
+        if (type === "success") {
+          setTimeout(() => {
+            statusEl.style.display = "none";
+          }, 3000);
+        }
+      }
+    </script>
+  </body>
+</html>
