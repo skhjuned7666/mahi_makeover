@@ -15,12 +15,12 @@ export default function Hero({ onCTAClick }: HeroProps) {
   return (
     <section className='relative w-full min-h-screen flex items-center justify-center overflow-hidden'>
       {/* Brand background image - fixed position so it stays static during scroll */}
-      <div
+      {/* <div
         className='fixed inset-0 z-0 bg-fit md:bg-fit md:bg-center bg-center md:bg-no-repeat bg-no-repeat opacity-30 md:opacity-30 hidden md:block'
         style={{
           backgroundImage: `url(${site.siteName})`,
           backgroundBlendMode: "cover",
-        }}></div>
+        }}></div> */}
 
       {/* Dark overlay to blend with the image */}
       <div className='fixed inset-0 z-0 bg-gradient-to-br from-dark-200/70 via-dark-100/50 to-deep1/70'></div>
@@ -32,11 +32,11 @@ export default function Hero({ onCTAClick }: HeroProps) {
           {/* Text content */}
           <div className='w-full lg:w-1/2 text-center lg:text-left mb-8 lg:mb-12 lg:pr-8'>
             {/* Main heading with serif font and TrueFocus effect */}
-            <motion.h1
+            <motion.h4
               initial={{ y: 20, opacity: 0 }}
               animate={{ y: 0, opacity: 1 }}
               transition={{ duration: 0.6 }}
-              className='text-base md:text-6xl font-bold text-slate-900 mb-4'
+              className='text-sm md:text-6xl font-bold text-gray-900 mb-4 hidden md:block'
               style={{
                 fontFamily: "'Playfair Display', serif",
                 // fontSize: "50px",
@@ -44,25 +44,53 @@ export default function Hero({ onCTAClick }: HeroProps) {
               <TrueFocus
                 sentence={
                   [
-                    "Every Look, A Masterpiece",
-                    "Luxury Makeup",
-                    "Premium Artistry",
+                    "Elevating beauty to its purest form..",
+                    "Every Look, look's like a Masterpiece..",
+                    "Luxury Makeup with Classic Artist..",
+                    "Where Timeless beauty meets flawless artistry..",
+                    "Luxury makeup for the elite touch..",
                   ] as const
                 }
-                blurAmount={3}
+                blurAmount={4}
                 borderColor='#0F172A'
                 glowColor='#16A34A'
                 animationDuration={2}
                 pauseBetweenAnimations={1}
               />
-            </motion.h1>
+            </motion.h4>
+            <motion.h4
+              initial={{ y: 50, opacity: 0 }}
+              animate={{ y: 0, opacity: 1 }}
+              transition={{ duration: 0.6 }}
+              className=' text-gray-900 md:hidden'
+              style={{
+                fontFamily: "'Playfair Display', serif",
+                // fontSize: "50px",
+              }}>
+              <TrueFocus
+                sentence={
+                  [
+                    "Elite Beauty look.",
+                    "Luxury Makeup Artistry.",
+                    "Flawless beauty & confidence.",
+                    "Pure Elegance glow.",
+                    "Luxe Aesthetics looks.",
+                  ] as const
+                }
+                blurAmount={5}
+                borderColor='#0F172A'
+                glowColor='#16A34A'
+                animationDuration={2}
+                pauseBetweenAnimations={1}
+              />
+            </motion.h4>
 
             {/* Tagline */}
             <motion.p
               initial={{ y: 20, opacity: 0 }}
               animate={{ y: 20, opacity: 1 }}
               transition={{ duration: 0.7, delay: 0.1 }}
-              className='text-xl md:text-4xl text-yellow-500/50 mb-3 font-light'>
+              className='text-base font-semibold md:text-4xl text-yellow-700 mb-3 '>
               {site.tagline}
             </motion.p>
 
@@ -71,7 +99,7 @@ export default function Hero({ onCTAClick }: HeroProps) {
               initial={{ y: 20, opacity: 0 }}
               animate={{ y: 20, opacity: 1 }}
               transition={{ duration: 0.7, delay: 0.2 }}
-              className='text-md md:text-xl text-pink-200/50 mb-8 max-w-lg mx-auto lg:mx-0'>
+              className='text-base md:text-xl text-pink-900 mb-8 max-w-lg mx-auto lg:mx-0 text-balance'>
               Get stunning makeup, stylish hair, and learn professional makeup
               skills — all under one roof. Beauty services for every occasion
               and training for every aspiring artist.

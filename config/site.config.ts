@@ -4,7 +4,7 @@ const siteConfig: SiteConfig = {
   siteName: "/brandName.png",
   siteNameMob: "/brandNameMob.png",
   logo: "/logo2.png",
-  tagline: "Your most Welcome...",
+  tagline: "Welcome to the World of Bridal Glamour !",
   contactEmail: "demo@example.com",
   socials: {
     instagram: "https://instagram.com/",

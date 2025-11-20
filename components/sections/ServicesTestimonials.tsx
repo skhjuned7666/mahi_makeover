@@ -14,18 +14,18 @@ export function ServicesTestimonials({ onBook }: { onBook: () => void }) {
     // Map service titles to appropriate images
     const imageMap: Record<string, string> = {
       "Bridal Glam":
-        "https://images.unsplash.com/photo-1610276347467-2f3a6053d297?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1yZWxhdGVkfDE4fHx8ZW58MHx8fHx8",
+        "https://res.cloudinary.com/dc0g30mss/image/upload/v1763659859/IMG_3898_cjhbow.jpg",
       "Engagement Look":
-        "https://images.unsplash.com/photo-1602910344008-22f323cc1817?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTR8fG1ha2V1cCUyMGFydGlzdHxlbnwwfHwwfHx8MA%3D%3D&auto=format&fit=crop&q=60&w=600",
+        "https://res.cloudinary.com/dc0g30mss/image/upload/v1763659837/IMG_8385_wmg9eh.jpg",
       "Party Makeup":
-        "https://images.unsplash.com/photo-1630228030850-062003233d10?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mzl8fG1ha2V1cCUyMGFydGlzdHxlbnwwfHwwfHx8MA%3D%3D&auto=format&fit=crop&q=60&w=500",
+        "https://res.cloudinary.com/dc0g30mss/image/upload/v1763659816/IMG_4389_px7hig.jpg",
       "Photoshoot Makeup":
-        "https://images.unsplash.com/photo-1638628064365-f08ad0ec8245?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mzh8fG1ha2V1cCUyMGFydGlzdHxlbnwwfHwwfHx8MA%3D%3D&auto=format&fit=crop&q=60&w=500",
+        "https://res.cloudinary.com/dc0g30mss/image/upload/v1763659812/IMG_5431_ukitki.jpg",
     };
 
     return (
       imageMap[title] ||
-      "https://images.unsplash.com/photo-1515131372403-7c110a87e1a9?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1yZWxhdGVkfDE0fHx8ZW58MHx8fHx8"
+      "https://res.cloudinary.com/dc0g30mss/image/upload/v1763659859/IMG_3898_cjhbow.jpg"
     );
   }
 
