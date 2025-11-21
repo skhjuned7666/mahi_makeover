@@ -14,14 +14,6 @@ interface HeroProps {
 export default function Hero({ onCTAClick }: HeroProps) {
   return (
     <section className='relative w-full min-h-screen flex items-center justify-center overflow-hidden'>
-      {/* Brand background image - fixed position so it stays static during scroll */}
-      {/* <div
-        className='fixed inset-0 z-0 bg-fit md:bg-fit md:bg-center bg-center md:bg-no-repeat bg-no-repeat opacity-30 md:opacity-30 hidden md:block'
-        style={{
-          backgroundImage: `url(${site.siteName})`,
-          backgroundBlendMode: "cover",
-        }}></div> */}
-
       {/* Dark overlay to blend with the image */}
       <div className='fixed inset-0 z-0 bg-gradient-to-br from-dark-200/70 via-dark-100/50 to-deep1/70'></div>
 
@@ -84,26 +76,27 @@ export default function Hero({ onCTAClick }: HeroProps) {
                 pauseBetweenAnimations={1}
               />
             </motion.h4>
+            <div>
+              {/* Tagline */}
+              <motion.p
+                initial={{ y: 20, opacity: 0 }}
+                animate={{ y: 20, opacity: 1 }}
+                transition={{ duration: 0.7, delay: 0.1 }}
+                className='text-base font-semibold md:text-4xl text-yellow-700 mb-3 '>
+                {site.tagline}
+              </motion.p>
 
-            {/* Tagline */}
-            <motion.p
-              initial={{ y: 20, opacity: 0 }}
-              animate={{ y: 20, opacity: 1 }}
-              transition={{ duration: 0.7, delay: 0.1 }}
-              className='text-base font-semibold md:text-4xl text-yellow-700 mb-3 '>
-              {site.tagline}
-            </motion.p>
-
-            {/* Subline */}
-            <motion.p
-              initial={{ y: 20, opacity: 0 }}
-              animate={{ y: 20, opacity: 1 }}
-              transition={{ duration: 0.7, delay: 0.2 }}
-              className='text-base md:text-xl text-pink-900 mb-8 max-w-lg mx-auto lg:mx-0 text-balance'>
-              Get stunning makeup, stylish hair, and learn professional makeup
-              skills — all under one roof. Beauty services for every occasion
-              and training for every aspiring artist.
-            </motion.p>
+              {/* Subline */}
+              <motion.p
+                initial={{ y: 20, opacity: 0 }}
+                animate={{ y: 20, opacity: 1 }}
+                transition={{ duration: 0.7, delay: 0.2 }}
+                className='text-base md:text-xl text-pink-900 mb-8 max-w-lg mx-auto lg:mx-0 text-balance'>
+                Get stunning makeup, stylish hair, and learn professional makeup
+                skills — all under one roof. Beauty services for every occasion
+                and training for every aspiring artist.
+              </motion.p>
+            </div>
 
             {/* CTAs */}
             <motion.div
