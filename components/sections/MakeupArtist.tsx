@@ -59,7 +59,7 @@ export default function MakeupArtist() {
                   Mahin Shaikh💕
                 </h3>
                 <img
-                  src='/artist.png'
+                  src='https://res.cloudinary.com/dc0g30mss/image/upload/v1763758510/artist_taym6l.png'
                   alt='Artist image'
                   className='md:hidden w-24 h-24 object-contain rounded-full bg-black/75 mb-5'
                 />
