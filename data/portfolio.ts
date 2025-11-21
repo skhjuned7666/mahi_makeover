@@ -5,16 +5,6 @@ const portfolio = [
     category: "Bridal"
   },
   {
-    src: "https://res.cloudinary.com/dc0g30mss/image/upload/v1763659859/IMG_3898_cjhbow.jpg",
-    alt: "Makeup artist applying highlighter",
-    category: "Engagement"
-  },
-  {
-    src: "https://res.cloudinary.com/dc0g30mss/image/upload/v1763659843/IMG_8386_pkbkbq.jpg",
-    alt: "Bride getting finishing touches",
-    category: "Party"
-  },
-  {
     src: "https://res.cloudinary.com/dc0g30mss/image/upload/v1763659837/IMG_8385_wmg9eh.jpg",
     alt: "Engagement glam portrait",
     category: "Photoshoot"
@@ -28,6 +18,11 @@ const portfolio = [
     src: "https://res.cloudinary.com/dc0g30mss/image/upload/v1763659821/IMG_8210_elonma.jpg",
     alt: "Party ready makeup look",
     category: "Engagement"
+  },
+  {
+    src: "https://res.cloudinary.com/dc0g30mss/image/upload/v1763659843/IMG_8386_pkbkbq.jpg",
+    alt: "Bride getting finishing touches",
+    category: "Party"
   },
   {
     src: "https://res.cloudinary.com/dc0g30mss/image/upload/v1763659816/IMG_4389_px7hig.jpg",
@@ -65,14 +60,14 @@ const portfolio = [
     category: "Bridal"
   },
   {
-    src: "https://res.cloudinary.com/dc0g30mss/image/upload/v1763659787/IMG_1639_a3mxn1.jpg",
-    alt: "Vintage bridal makeup style",
-    category: "Engagement"
-  },
-  {
     src: "https://res.cloudinary.com/dc0g30mss/image/upload/v1763659784/IMG_2181_wr03qt.jpg",
     alt: "Bridal makeup with floral accessories",
     category: "Party"
+  },
+  {
+    src: "https://res.cloudinary.com/dc0g30mss/image/upload/v1763659859/IMG_3898_cjhbow.jpg",
+    alt: "Makeup artist applying highlighter",
+    category: "Engagement"
   },
   {
     src: "https://res.cloudinary.com/dc0g30mss/image/upload/v1763659783/IMG_1168_yf4xwi.jpg",

@@ -77,8 +77,8 @@ export default function PortfolioGrid({ items = [] }: PortfolioGridProps) {
         </div>
       )}
 
-      {/* Show "Show Less" button when all items are visible */}
-      {showAll && (
+      {/* Show "Show Less" button when all items are visible and there are more than 10 items
+      {showAll && filtered.length > 10 && (
         <div className='flex justify-center mt-6'>
           <motion.button
             whileHover={{ scale: 1.05 }}
@@ -88,7 +88,7 @@ export default function PortfolioGrid({ items = [] }: PortfolioGridProps) {
             Show Less
           </motion.button>
         </div>
-      )}
+      )} */}
 
       <Modal
         open={!!lightbox}
