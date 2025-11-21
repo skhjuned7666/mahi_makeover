@@ -26,7 +26,7 @@ export default function Hero({ onCTAClick }: HeroProps) {
       <div className='fixed inset-0 z-0 bg-gradient-to-br from-dark-200/70 via-dark-100/50 to-deep1/70'></div>
 
       {/* Main content */}
-      <div className='relative w-full max-w-7xl mx-auto px-4 py-12 md:py-24 flex flex-col items-center'>
+      <div className='relative w-full max-w-7xl mx-auto px-4 py-12 md:py-1 flex flex-col items-center'>
         {/* Top row with text content and draggable cards */}
         <div className='w-full flex flex-col lg:flex-row items-center'>
           {/* Text content */}

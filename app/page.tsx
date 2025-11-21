@@ -1,7 +1,7 @@
 "use client";
 
 import { useState } from "react";
-import Navbar from "@/components/layout/Navbar";
+// import Navbar from "@/components/layout/Navbar";
 import Hero from "@/components/sections/Hero";
 import PortfolioGrid from "@/components/sections/PortfolioGrid";
 import TestimonialSlider from "@/components/sections/TestimonialSlider";
@@ -42,9 +42,9 @@ export default function Home() {
   ];
 
   return (
-    <div className='relative w-full min-h-screen'>
+    <div className='relative w-full min-h-screen pt-16'>
       {/* Fixed header/navbar */}
-      <Navbar />
+      {/* <Navbar /> */}
 
       {/* Background effects - positioned absolutely behind content */}
       <CombinedBackground>
