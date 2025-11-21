@@ -18,6 +18,7 @@ import pricing from "@/data/pricing";
 import { PortfolioItem, Testimonial, FAQItem, PricingItem } from "@/types";
 import { ServicesTestimonials } from "@/components/sections/ServicesTestimonials";
 import { CombinedBackground } from "@/components/sections/CombinedBackground";
+import MakeupArtist from "@/components/sections/MakeupArtist";
 
 export default function Home() {
   // Admin phone number for WhatsApp integration (replace with actual number)
@@ -75,6 +76,8 @@ export default function Home() {
               <PortfolioGrid items={portfolio} />
             </div>
           </section>
+
+          <MakeupArtist />
 
           <section id='about' className='mx-auto max-w-6xl px-4 md:py-12'>
             <div className='text-center mb-8 relative'>

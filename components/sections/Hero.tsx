@@ -1,10 +1,9 @@
 import dynamic from "next/dynamic";
 import { motion } from "framer-motion";
+import Image from "next/image";
 import site from "@/config/site.config";
-// import StarBorder from "@/components/ui/components/StarBorder";
 import TrueFocus from "@/components/ui/components/TrueFocus";
 import "@/components/ui/components/TrueFocus.css";
-import HeroDraggableCards from "./HeroDraggableCards";
 import HeroImageCarousel from "./HeroImageCarousel";
 
 interface HeroProps {
@@ -82,7 +81,7 @@ export default function Hero({ onCTAClick }: HeroProps) {
                 initial={{ y: 20, opacity: 0 }}
                 animate={{ y: 20, opacity: 1 }}
                 transition={{ duration: 0.7, delay: 0.1 }}
-                className='text-base font-semibold md:text-4xl text-yellow-700 mb-3 '>
+                className='text-base font-semibold md:text-4xl text-red-950 mb-3 animate-text-glow'>
                 {site.tagline}
               </motion.p>
 
@@ -91,7 +90,7 @@ export default function Hero({ onCTAClick }: HeroProps) {
                 initial={{ y: 20, opacity: 0 }}
                 animate={{ y: 20, opacity: 1 }}
                 transition={{ duration: 0.7, delay: 0.2 }}
-                className='text-base md:text-xl text-pink-900 mb-8 max-w-lg mx-auto lg:mx-0 text-balance'>
+                className='text-base md:text-xl text-pink-950 mb-8 max-w-lg mx-auto lg:mx-0 text-balance'>
                 Get stunning makeup, stylish hair, and learn professional makeup
                 skills — all under one roof. Beauty services for every occasion
                 and training for every aspiring artist.
@@ -123,7 +122,15 @@ export default function Hero({ onCTAClick }: HeroProps) {
 
           {/* Draggable cards section - only visible on large screens */}
           <div className='hidden lg:flex lg:w-1/2 justify-center items-center'>
-            <HeroDraggableCards />
+            <div className=''>
+              <p className='text-center text-gray-500 shadow-gold-glow-lg'>
+                <img
+                  src='https://res.cloudinary.com/dc0g30mss/image/upload/v1763659787/IMG_1639_a3mxn1.jpg'
+                  alt=''
+                  className='w-80 h-100 rounded-xl'
+                />
+              </p>
+            </div>
           </div>
         </div>
 
